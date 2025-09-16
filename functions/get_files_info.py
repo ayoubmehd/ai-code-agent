@@ -1,16 +1,6 @@
 import os
 from pathlib import Path
-
-def is_path_in_directory(working_directory, directory):
-    try:
-
-        if (working_directory == directory):
-            return True
-        
-        directory.relative_to(working_directory)
-        return True
-    except ValueError:
-        return False
+from functions.is_path_in_directory import is_path_in_directory
 
 def get_files_info(working_directory, directory="."):
 
